@@ -16,5 +16,4 @@ public class FibonachiClass{
             return fib1 + fib2;
         }
     }
-
 }
