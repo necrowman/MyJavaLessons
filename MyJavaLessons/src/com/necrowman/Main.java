@@ -1,12 +1,31 @@
 package com.necrowman;
+import java.sql.Timestamp;
+import java.security.cert.CertPath;
+import java.util.Date;
 
 public class Main {
 
     public static void main(String[] args) {
         Main obj = new Main();
-        obj.calculateFibonachiNumber(7);
         obj.calculateSqureNumber(4);
-        obj.calculateClimbStairs(48);
+
+        Timestamp timestamp1 = new Timestamp(System.currentTimeMillis());
+        obj.calculateFibonachiNumber(4);
+        Timestamp timestamp2 = new Timestamp(System.currentTimeMillis());
+        System.out.println("calculated for (" + timestamp2 + " - " + timestamp1 + ") seconds");
+
+
+//        obj.calculateSqureNumber(4);
+
+        Timestamp timestamp3 = new Timestamp(System.currentTimeMillis());
+        obj.calculateClimbStairs(91);
+        Timestamp timestamp4 = new Timestamp(System.currentTimeMillis());
+        System.out.println("calculated for (" + timestamp4 + " - " + timestamp3 + ") seconds");
+
+        Timestamp timestamp5 = new Timestamp(System.currentTimeMillis());
+        obj.calculateClimbStairs(91);
+        Timestamp timestamp6 = new Timestamp(System.currentTimeMillis());
+        System.out.println("calculated for (" + timestamp6 + " - " + timestamp5 + ") seconds");
     }
 
     public void calculateFibonachiNumber(int n){
@@ -22,6 +41,6 @@ public class Main {
 
     public void calculateClimbStairs(int p){
         ClimbStairs calc = new ClimbStairs();
-        System.out.println("Climb stairs number is: " + calc.climbStairs(p));
+        System.out.println("Climb stairs number for " + p +" is: " + calc.climbStairs(p));
     }
 }
