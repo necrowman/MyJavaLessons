@@ -15,6 +15,8 @@ public class Main {
         System.out.println("calculated for (" + timestamp2 + " - " + timestamp1 + ") seconds");
 
 
+        obj.twoSum(new int[]{1, 3, 6, 4, 1, 6, 8, 5},12);
+
 //        obj.calculateSqureNumber(4);
 
         Timestamp timestamp3 = new Timestamp(System.currentTimeMillis());
@@ -42,5 +44,30 @@ public class Main {
     public void calculateClimbStairs(int p){
         ClimbStairs calc = new ClimbStairs();
         System.out.println("Climb stairs number for " + p +" is: " + calc.climbStairs(p));
+    }
+
+    public void twoSum(int [] inputArr,int target){
+        TwoSum calc = new TwoSum();
+        System.out.print("Indexes for array \n[");
+        calc.twoSum(inputArr, target);
+        for(int i = 0; i < inputArr.length;i++) {
+           System.out.print(inputArr[i]);
+           if(i < inputArr.length - 1)
+               System.out.print(", ");
+        }
+        System.out.println(" ]");
+        int [] res = calc.twoSum(inputArr, target);
+
+        System.out.print("and target " + target + " is: \n[");
+
+        for(int i = 0; i < res.length;i++) {
+            System.out.print(res[i]);
+            if(i < res.length - 1)
+                System.out.print(", ");
+        }
+        System.out.print(" ]\n");
+
+
+
     }
 }
