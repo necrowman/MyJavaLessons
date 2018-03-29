@@ -37,6 +37,12 @@ public class Main {
 //        System.out.println("calculated for (" + timestamp6 + " - " + timestamp5 + ") seconds");
     }
 
+    public void calculateSubArray(int [] inputArr, int start, int end){
+        SubArray calc = new SubArray();
+        System.out.println();
+
+    }
+
     public void calculateNums(int [] array){
         Nums calc = new Nums();
         System.out.print("[");
