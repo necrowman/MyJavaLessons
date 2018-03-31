@@ -14,8 +14,12 @@ public class Main {
         obj.calculateNums(new int [] {7, 4, 3, 5});
         obj.calculateNums(new int [] {});
 
+        obj.calculateSubArray(new int[] {1 ,4 ,5 ,7 ,3 ,5 ,7 ,4 ,5 ,6 ,0},2,5);
 
+        obj.calculateMergeArray(new int[] {1, 2, 3, 4, 6}, 3, new int[] {7, 8, 9, 9},3);
 
+        obj.calculateMergeArray(new int[] {1, 3, 5, 6, 7}, 4, new int[] {2, 4, 5, 6},4);
+        obj.calculateMergeArray(new int[] {1, 3, 5, 6, 7}, -51, new int[] {2, 4, 5, 6},0);
 //        Timestamp timestamp1 = new Timestamp(System.currentTimeMillis());
 //        obj.calculateFibonachiNumber(4);
 //        Timestamp timestamp2 = new Timestamp(System.currentTimeMillis());
@@ -39,7 +43,19 @@ public class Main {
 
     public void calculateSubArray(int [] inputArr, int start, int end){
         SubArray calc = new SubArray();
-        System.out.println();
+        PrintArray.printArray(inputArr);
+        int [] result = calc.subArray(inputArr, start, end);
+        PrintArray.printArray(result);
+    }
+    public void calculateMergeArray(int [] arr1, int n, int [] arr2, int m){
+        MergeArray calc = new MergeArray();
+        System.out.println("Arr1 :");
+        PrintArray.printArray(arr1);
+        System.out.println("Arr2 :");
+        PrintArray.printArray(arr2);
+        int [] res = calc.mergeArrays(arr1, n, arr2, m);
+        System.out.println("Result :");
+        PrintArray.printArray(res);
 
     }
 

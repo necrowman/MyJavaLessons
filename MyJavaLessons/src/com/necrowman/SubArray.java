@@ -15,7 +15,7 @@ public class SubArray{
         int [] res = new int [] {};
         int startIndex = (start < 0) ? 0 : start;
         int endIndex = (end > inputArr.length) ? inputArr.length : end;
-        for(int i = startIndex; i < endIndex; i++){
+        for(int i = startIndex; i <= endIndex; i++){
             res = SubArray.addElement(res, inputArr[i]);
         }
         return res;
