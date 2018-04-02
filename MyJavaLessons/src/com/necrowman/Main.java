@@ -7,38 +7,15 @@ public class Main {
 
     public static void main(String[] args) {
         Main obj = new Main();
-        obj.calculateSqureNumber(4);
-        obj.calculateNums(new int [] {1, 2, 3, 2, 1});
-        obj.calculateNums(new int [] {1, 2, 3, 5, 1});
-        obj.calculateNums(new int [] {7, 5, 7, 5});
-        obj.calculateNums(new int [] {7, 4, 3, 5});
-        obj.calculateNums(new int [] {});
 
-        obj.calculateSubArray(new int[] {1 ,4 ,5 ,7 ,3 ,5 ,7 ,4 ,5 ,6 ,0},2,5);
-
-        obj.calculateMergeArray(new int[] {1, 2, 3, 4, 6}, 3, new int[] {7, 8, 9, 9},3);
-
-        obj.calculateMergeArray(new int[] {1, 3, 5, 6, 7}, 4, new int[] {2, 4, 5, 6},4);
-        obj.calculateMergeArray(new int[] {1, 3, 5, 6, 7}, -51, new int[] {2, 4, 5, 6},0);
-//        Timestamp timestamp1 = new Timestamp(System.currentTimeMillis());
-//        obj.calculateFibonachiNumber(4);
-//        Timestamp timestamp2 = new Timestamp(System.currentTimeMillis());
-//        System.out.println("calculated for (" + timestamp2 + " - " + timestamp1 + ") seconds");
-//
-//
-//        obj.twoSum(new int[]{1, 3, 6, 4, 1, 6, 8, 5},12);
-//
-////        obj.calculateSqureNumber(4);
-//
-//        Timestamp timestamp3 = new Timestamp(System.currentTimeMillis());
-//        obj.calculateClimbStairs(91);
-//        Timestamp timestamp4 = new Timestamp(System.currentTimeMillis());
-//        System.out.println("calculated for (" + timestamp4 + " - " + timestamp3 + ") seconds");
-//
-//        Timestamp timestamp5 = new Timestamp(System.currentTimeMillis());
-//        obj.calculateClimbStairs(91);
-//        Timestamp timestamp6 = new Timestamp(System.currentTimeMillis());
-//        System.out.println("calculated for (" + timestamp6 + " - " + timestamp5 + ") seconds");
+        obj.boobleSortingOfArray(new int [] {1, 3, 6, 4, 1, 6, 8, 5, 12, 12,34,21,345,12,55,35,68,35,75,422,345,67,80,
+                123,45,67},true);
+        obj.boobleSortingOfArray(new int [] {},true);
+        obj.boobleSortingOfArray(new int [] {98,87,76,65,54,43,32,21, 10, 9,7,4,1},true);
+        obj.boobleSortingOfArray(new int [] {1, 3, 6, 4, 1, 6, 8, 5, 12, 12,34,21,345,12,55,35,68,35,75,422,345,67,80,
+                123,45,67},false);
+        obj.boobleSortingOfArray(new int [] {},false);
+        obj.boobleSortingOfArray(new int [] {98,87,76,65,54,43,32,21, 10, 9,7,4,1},false);
     }
 
     public void calculateSubArray(int [] inputArr, int start, int end){
@@ -55,6 +32,13 @@ public class Main {
         PrintArray.printArray(arr2);
         int [] res = calc.mergeArrays(arr1, n, arr2, m);
         System.out.println("Result :");
+        PrintArray.printArray(res);
+
+    }
+    public void boobleSortingOfArray(int [] arr, boolean asc){
+        PrintArray.printArray(arr);
+        Sorting c = new Sorting();
+        int [] res = c.boobleSorting(arr,asc);
         PrintArray.printArray(res);
 
     }
