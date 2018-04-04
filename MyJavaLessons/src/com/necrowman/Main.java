@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Main obj = new Main();
 
+        System.out.println("Buble Sorting:");
         obj.boobleSortingOfArray(new int [] {1, 3, 6, 4, 1, 6, 8, 5, 12, 12,34,21,345,12,55,35,68,35,75,422,345,67,80,
                 123,45,67},true);
         obj.boobleSortingOfArray(new int [] {},true);
@@ -16,6 +17,25 @@ public class Main {
                 123,45,67},false);
         obj.boobleSortingOfArray(new int [] {},false);
         obj.boobleSortingOfArray(new int [] {98,87,76,65,54,43,32,21, 10, 9,7,4,1},false);
+
+        System.out.println("Vybirka Sorting:");
+        obj.viborkaSortingOfArray(new int [] {1, 3, 6, 4, 1, 6, 8, 5, 12, 12,34,21,345,12,55,35,68,35,75,422,345,67,80,
+                123,45,67},true);
+        obj.viborkaSortingOfArray(new int [] {},true);
+        obj.viborkaSortingOfArray(new int [] {98,87,76,65,54,43,32,21, 10, 9,7,4,1},true);
+        obj.viborkaSortingOfArray(new int [] {1, 3, 6, 4, 1, 6, 8, 5, 12, 12,34,21,345,12,55,35,68,35,75,422,345,67,80,
+                123,45,67},false);
+        obj.viborkaSortingOfArray(new int [] {},false);
+        obj.viborkaSortingOfArray(new int [] {98,87,76,65,54,43,32,21, 10, 9,7,4,1},false);
+
+    }
+
+    public void viborkaSortingOfArray(int [] arr, boolean asc){
+        PrintArray.printArray(arr);
+        Sorting c = new Sorting();
+        int [] res = c.viborkaSorting(arr,asc);
+        PrintArray.printArray(res);
+
     }
 
     public void calculateSubArray(int [] inputArr, int start, int end){
