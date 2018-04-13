@@ -49,4 +49,21 @@ public class Sorting {
         return res;
     }
 
+    public int[] inclusionSorting(int [] inputArr){
+        int [] res = inputArr;
+        for(int i = 1; i < res.length; i++){
+            int boofer = res[i];
+            int j;
+            for(j = i; j > 0; j--) {
+                if (boofer < res[j - 1]) {
+                    res[j] = res[j - 1];
+                } else {
+                    break;
+                }
+            }
+            res[j] = boofer;
+        }
+        return res;
+    }
+
 }
